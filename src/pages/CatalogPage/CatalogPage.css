@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.catalog_container{
+    padding-top: 47px;
+max-width: 1920px;
+margin: 0 auto;
+
+}
+.catalog_content{
+margin: 0 auto;
+max-width: 1440px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.category_header{
+width: 800px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.category_span a{
+width: 174px;
+padding: 18px 57px;
+background-color: #000;
+color: #fff;
+text-align: center;
+font-size: 24px;
+}
+.category{
+    width: 174px;
+    padding: 18px 57px;
+    border: 3px solid #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #000;
+    
+}
+.catalog{
+    padding-top: 44px;
+width: 1440px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+gap: 45px;
+}
+.item{
+display: flex;
+flex-direction: column;
+width: 384px;
+gap: 35px;
+}
+.item_img{
+
+}
+.item_title{
+font-size: 30px;
+font-weight: 400;
+}
+.item_down{
+display: flex;
+gap: 59px;
+align-items: center;
+}
+.item_price{
+font-size: 30px;
+}
+.item_icons{
+
+}
+.item_icon{
+
+}
