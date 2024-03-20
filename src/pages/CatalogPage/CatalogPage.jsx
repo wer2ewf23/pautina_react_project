@@ -1,8 +1,17 @@
 import Card from '../../components/Card/Card'
 import {catalog} from '../../data'
 import './CatalogPage.css'
+import {useState} from 'react'
 
 export default function Catalog(){
+
+    const[query,setQuery] = useState("")
+
+    function search (e){
+        setQuery(e.target.value)
+    }
+    const filterdProdcts = catalog.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
+
     return(
         <>
             <div className="catalog_container">
@@ -15,23 +24,21 @@ export default function Catalog(){
                     </div>
                     <div className="catalog">
 
-                        {/* <div className="item">
-                            <img src="src\assets\img\catalog\item_1.png" alt="" className="item_img" />
-                            <h3 className="item_title">Рубашка СВЭГ</h3>
-                            <div className="item_down">
-                                <p className="item_price">9999 ₽</p>
-                                <div className="item_icons">
-                                    <a href="" className="item_icon"><img src="src\assets\icons\item_like.png" alt="" /></a>
-                                    <a href="" className="item_icon"><img src="src\assets\icons\item_cart.png" alt="" /></a>
-                                </div>
-                            </div>
-                        </div> */}
-
-                        {catalog.map((card,index) => {
-                            return(
-                                <Card key={index} {...card}/>
-                            )
-                        })}
+                    <input onChange={search} type="search" name="search" placeholder="Поиск" />
+                        
+                        {
+                        filterdProducts.length ?
+                        filterdProducts.map((card,index) => {
+                            // catalog.map((card,index) => {
+                                return(
+                                    <Card key={index} {...card}/>
+                                )
+                            // })
+                        })
+                        
+                        :
+                        <h2>По запросу "{query}" ничего не найдено</h2>
+                        }
 
                         {/* {
                     products.map((product,index) => {
