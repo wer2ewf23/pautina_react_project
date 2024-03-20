@@ -1,8 +1,8 @@
 import Card from '../../components/Card/Card'
-import {products} from '../../data'
+import {catalog} from '../../data'
 import './CatalogPage.css'
 
-export default function CatalogPage(){
+export default function Catalog(){
     return(
         <>
             <div className="catalog_container">
@@ -27,16 +27,20 @@ export default function CatalogPage(){
                             </div>
                         </div> */}
 
-                        {
+                        {catalog.map((card,index) => {
+                            return(
+                                <Card key={index} {...card}/>
+                            )
+                        })}
+
+                        {/* {
                     products.map((product,index) => {
                         return(
                             <Card key={index} {...product} />
                         )
                     })
-                }                
+                }                 */}
                 
-                {/* <Card name="Тяги" price="3500" /> */}
-
                     </div>
                 </div>
             </div>

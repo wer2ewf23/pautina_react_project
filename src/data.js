@@ -1,4 +1,4 @@
-export const products = [
+export const catalog = [
     {
         id:1,
         name:'Футболка оверсайз',
