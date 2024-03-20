@@ -38,6 +38,8 @@ align-items: center;
 }
 .gap{
 color: #fff;
+font-size: 50px;
+font-weight: 400;
 }
 .header_icons{
 display: flex;
